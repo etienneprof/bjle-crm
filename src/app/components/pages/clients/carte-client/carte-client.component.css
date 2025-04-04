@@ -1,0 +1,9 @@
+.main-card {
+    transition: all .3s;
+}
+
+.main-card:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 4px 1px #0000006a; 
+    box-shadow: 0px 0px 4px 1px #0000006a;
+}

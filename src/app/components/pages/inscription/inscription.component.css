@@ -1,0 +1,29 @@
+.container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alert {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-top: 4px;
+    font-size: .9em;
+    transition: all .3s;
+    border-bottom: solid 1px #00000000;
+}
+
+a:hover {
+    border-bottom: solid 1px #000000FF;
+}

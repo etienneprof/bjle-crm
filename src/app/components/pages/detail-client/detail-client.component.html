@@ -1,0 +1,43 @@
+<div class="container mt-2 border rounded-2 pt-2 pb-2">
+    <h5>Client n°{{ client?.id }} <small>(ref. interne : {{ client?.ref_interne }})</small></h5>
+    
+    <div>
+        <label for="raison_sociale">Raison sociale : </label>
+        <input type="text" id="raison_sociale" [value]="client?.raison_sociale" class="w-100" disabled>
+    </div>
+    <div>
+        <label for="ref_interne">Référence interne : </label>
+        <input type="text" id="ref_interne" [value]="client?.ref_interne" class="w-100" disabled>
+    </div>
+    <div>
+        <label for="siren">SIREN : </label>
+        <input type="text" id="siren" [value]="client?.siren" class="w-100" disabled>
+    </div>
+    <div>
+        <fieldset>
+            <legend>Adresse :</legend>
+            <div>
+                <label for="numero" class="w-10">N° : </label>
+                <input type="number" id="numero" [value]="client?.adresse?.numero" class="w-90" disabled>
+            </div>
+            <div>
+                <label for="rue" class="w-10">Rue : </label>
+                <input type="text" id="rue" [value]="client?.adresse?.rue" class="w-90" disabled>
+            </div>
+            <div>
+                <label for="code_postal" class="w-10">Code postal : </label>
+                <input type="text" id="code_postal" [value]="client?.adresse?.code_postal" class="w-90" disabled>
+            </div>
+            <div>
+                <label for="ville" class="w-10">Ville : </label>
+                <input type="text" id="ville" [value]="client?.adresse?.ville" class="w-90" disabled>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Contacts</legend>
+            <div class="row">
+                <app-carte-contact class="col-6" *ngFor="let contact of client?.contacts" [contact]="contact"></app-carte-contact>
+            </div>
+        </fieldset>
+    </div>
+</div>

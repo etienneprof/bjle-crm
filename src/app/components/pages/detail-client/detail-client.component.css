@@ -1,0 +1,13 @@
+input {
+    padding-left: 4px;
+    height: 2.5em;
+    margin-bottom: 8px;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+.w-90 {
+    width: 90%;
+}

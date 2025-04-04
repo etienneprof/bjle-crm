@@ -1,0 +1,13 @@
+.my-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: all .5s;
+}
+
+.alert {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
