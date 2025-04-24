@@ -8,5 +8,5 @@ export interface Client {
     siren: string;
     tva_intracommunautaire: string;
     adresse: Adresse;
-    contacts: Contact[]
+    contacts: Contact[];
 }

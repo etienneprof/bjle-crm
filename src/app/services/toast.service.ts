@@ -12,12 +12,12 @@ export class ToastService {
   get message() { return this._message }
   get visible() { return this._visible }
 
-  show(message: string) {
+  show(message: string, duration: number) {
     this._message[0] = message;
     this._visible[0] = true;
 
     setTimeout(() => {
       this._visible[0] = false;
-    }, 3000);
+    }, duration);
   }
 }

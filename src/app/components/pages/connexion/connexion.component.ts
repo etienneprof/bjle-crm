@@ -4,6 +4,7 @@ import { UtilisateurService } from '../../../services/utilisateur.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ReactiveNavbarService } from '../../../services/reactive-navbar.service';
+import { ToastService } from '../../../services/toast.service';
 
 @Component({
   selector: 'app-connexion',
@@ -19,6 +20,7 @@ export class ConnexionComponent {
   constructor(
     private service: UtilisateurService,
     private refreshService: ReactiveNavbarService,
+    private toastService: ToastService,
     private router: Router
   ) {}
 
@@ -27,6 +29,7 @@ export class ConnexionComponent {
     if (this.service.exists(user)) {
       sessionStorage.setItem("user", JSON.stringify(user));
       this.refreshService.refresh();
+      this.toastService.show(`Bienvenue ${user.username}`, 3000);
       this.router.navigate(["/accueil"])
     } else {
       this.message = "Identifiant ou mot de passe incorrect.";

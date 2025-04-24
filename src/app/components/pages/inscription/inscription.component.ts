@@ -27,7 +27,7 @@ export class InscriptionComponent {
       this.message = "Cet utilisateur existe déjà.";
     } else {
       this.service.addUtilisateur({username : this.username, password : this.password});
-      this.toast_service.show(`Utilisateur \"${this.username}\" créé.`);
+      this.toast_service.show(`Utilisateur \"${this.username}\" créé.`, 2000);
       this.router.navigate(["/connexion"]);
     }
   }

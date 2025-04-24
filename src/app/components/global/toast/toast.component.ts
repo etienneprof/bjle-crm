@@ -9,8 +9,8 @@ import { ToastService } from '../../../services/toast.service';
   styleUrl: './toast.component.css'
 })
 export class ToastComponent {
-  message = ["pouet"];
-  visible = [false];
+  message : string[] = ["pouet"];
+  visible : boolean[] = [false];
 
   constructor(private service: ToastService) {
     this.message = service.message;

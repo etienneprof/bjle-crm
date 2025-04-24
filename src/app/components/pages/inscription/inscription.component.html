@@ -2,7 +2,7 @@
     <div class="card col-md-6">
         <form class="card-body" (submit)="inscrire()">
             <h5 class="card-title">Inscription</h5>
-            <p class="alert alert-danger" *ngIf="message.length > 1">{{ message }}</p>
+            <p class="alert alert-danger" *ngIf="message.length > 0">{{ message }}</p>
             <div>
                 <label for="username">Login</label>
                 <input type="text" id="username" class="w-100" [(ngModel)]="username" name="username">
